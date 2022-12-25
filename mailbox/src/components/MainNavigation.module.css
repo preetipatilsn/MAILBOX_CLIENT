@@ -1,0 +1,21 @@
+.mainNav {
+  background-color: azure;
+  padding: 5px 0 5px 0;
+  position: sticky;
+}
+
+.mainNav li {
+  list-style: none;
+}
+
+.mainNav a {
+  text-decoration: none;
+  font-size: 25px;
+  color: seagreen;
+  font-weight: bold;
+}
+
+.mainNav a.active {
+  border-bottom: 3px solid seagreen;
+  font-family: cursive;
+}
