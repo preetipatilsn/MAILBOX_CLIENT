@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { json } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import classes from './Login.module.css';
 
@@ -8,6 +8,8 @@ const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
+  const navigate = useNavigate();
+    
 
   const hasAccountHandler = () => {
     setHasAccount((preState) => !preState);
@@ -49,7 +51,8 @@ const Login = () => {
       const data = await respense.json();
 
       if (respense.ok) {
-        console.log('Login SuccessFul');
+        localStorage.setItem('idToken', JSON.stringify(data));
+        navigate('/home');
       } else {
         throw data.error;
       }
@@ -60,7 +63,8 @@ const Login = () => {
 
   return (
     <div className={classes['main-form']}>
-      <form className={classes.form} onSubmit={loginFormHandler}>
+          <form className={classes.form} onSubmit={loginFormHandler}>
+          <div className={classes.title}>{hasAccount ? 'Login' : 'Sign Up'}</div>
         <input type='email' placeholder='Email' ref={emailRef} required />
         <input
           type='password'
@@ -77,7 +81,7 @@ const Login = () => {
           />
         )}
         <div className={classes.button}>
-          <button type='submit'>{hasAccount ? 'Sign In' : 'Sign Up'}</button>
+          <button type='submit'>{hasAccount ? 'Log In' : 'Sign Up'}</button>
         </div>
       </form>
       <div onClick={hasAccountHandler} className={classes.hasAccount}>
