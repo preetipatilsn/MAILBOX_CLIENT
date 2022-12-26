@@ -1,7 +1,7 @@
 .h1 {
-  width: 50%;
+  width: 60%;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 40px;
   font-family: cursive;
   text-align: center;
 }
@@ -18,4 +18,77 @@
   padding: 10px 30px 10px 30px;
   border-radius: 10px;
   box-shadow: 0 0 5px aquamarine;
+  margin: auto;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.form {
+  width: 900px;
+  box-sizing: border-box;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.form input {
+  border: none;
+  width: 90%;
+  font-size: 18px;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form label {
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 50%;
+}
+
+.form .to {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #c7c7c7;
+}
+
+.form .title {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #c7c7c7;
+}
+
+.wrapper-class {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.editor-class {
+  padding: 0 0 0 1rem;
+  border-bottom: 2px solid #ccc;
+  min-height: 300px;
+}
+
+.toolbar-class {
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  background-color: azure;
+}
+
+.form .button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button button {
+  padding: 8px 30px 8px 30px;
+  font-size: 18px;
+  background-color: seagreen;
+  border-radius: 5px;
+  border: none;
+  color: white;
 }
