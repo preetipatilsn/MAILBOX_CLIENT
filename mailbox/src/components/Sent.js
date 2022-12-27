@@ -11,7 +11,7 @@ const Sent = () => {
   const sentMails = mails.filter((mail) => mail.from === email);
 
   const mailData = sentMails.map((mail) => (
-    <MailData key={mail.id} mail={mail} mailId={mail.to}/>
+    <MailData key={mail.id} mail={mail} mailId={mail.to} toOrFrom='To : '/>
   ));
 
   return <div className={classes.main}>{mailData}</div>;

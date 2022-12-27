@@ -1,11 +1,10 @@
 .sidebar {
   position: fixed;
   top: 0;
-  width: 300px;
+  width: 200px;
   height: 100vh;
   background-color: azure;
   padding-top: 120px;
-  border-right: seagreen 5px solid;
 }
 
 .sidebar button {
@@ -17,11 +16,13 @@
   font-weight: bold;
   background-color: seagreen;
   border: none;
-  width: 87%;
+  width: 74%;
   cursor: pointer;
 }
 
 .sidebar li {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   margin: 1em;
   padding: 1rem;

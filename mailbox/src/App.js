@@ -16,9 +16,9 @@ function App() {
   const dispatch = useDispatch();
 
   if (isLoggedIn && firstTime) {
-    let email = JSON.parse(localStorage.getItem('idToken')).email;
-    email = email.replace('@', '').replace('.', '');
-    dispatch(replaceMail(email));
+    const loggedUserEmail = JSON.parse(localStorage.getItem('idToken')).email;
+    const emailUrl = loggedUserEmail.replace('@', '').replace('.', '');
+    dispatch(replaceMail(emailUrl, loggedUserEmail));
   }
 
   return (
