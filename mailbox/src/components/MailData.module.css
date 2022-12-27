@@ -57,3 +57,11 @@
 .notBody {
   display: none;
 }
+
+.body i {
+  padding: 1rem 1rem 0 0;
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+  color: lightblue;
+}
